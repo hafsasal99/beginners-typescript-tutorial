@@ -17,8 +17,20 @@ interface Post {
  * How do we ensure that makeUser ALWAYS
  * returns a user?
  */
-const makeUser = () => {
-  return {};
+const makeUser = (): User => {
+  const user: User = {
+    id: 1,
+    firstName: "hafsa",
+    lastName: "saleem",
+    role: "admin",
+    posts: [
+      {
+        id: 1,
+        title: "Post 1",
+      },
+    ],
+  };
+  return user;
 };
 
 it("Should return a valid user", () => {
